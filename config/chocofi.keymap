@@ -17,7 +17,7 @@
   #elif defined(ALL_1U)
     zmk,physical-layout = &layout_75_all1u;
   #else
-  #error "Layout not defined, please define a layout using by uncommenting the appropriate line in bt75_v1.keymap"
+  #error "Layout not defined, please define a layout using by uncommenting the appropriate line in chocofi.keymap"
   #endif
   };
 
