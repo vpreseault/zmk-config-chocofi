@@ -8,14 +8,14 @@
         e_aigu: e_aigu {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LEFT_ALT &kp KP_N1 &kp KP_N3 &kp KP_N0>;
+            bindings = <&kp LA(KP_N1) &kp LA(KP_N3) &kp LA(KP_N0)>;
             label = "E_AIGU";
         };
 
         alt_tab: alt_tab {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LEFT_ALT &kp TAB>;
+            bindings = <&kp LA(TAB)>;
             label = "ALT_TAB";
         };
     };
@@ -25,7 +25,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "SEMI_COLON";
             #binding-cells = <0>;
-            bindings = <&none>, <&none>;
+            bindings = <&kp SEMICOLON>, <&kp COLON>;
         };
 
         backspace_delete: backspace_delete {
@@ -75,7 +75,6 @@
 &none  &kp ESC    &kp EQUAL  &kp UNDER  &kp QUESTION     &kp SQT              &kp LT            &kp LPAR        &kp RPAR         &kp GT             &kp BSLH  &none
                              &kp LALT   &to 0            &kp GRAVE            &kp SPACE         &to 2           &to 3
             >;
-
         };
 
         number_media {
