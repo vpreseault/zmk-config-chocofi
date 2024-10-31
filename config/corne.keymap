@@ -34,27 +34,6 @@ ZMK_HOLD_TAP(hmr,
 )
 
 / {
-    macros {
-        e_aigu: e_aigu {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            wait-ms = <20>;
-            tap-ms = <20>;
-            bindings
-                = <&macro_press   &kp LALT>
-                , <&macro_tap     &kp KP_N1 &kp KP_N3 &kp KP_N0>
-                , <&macro_release &kp LALT>
-                ;
-        };
-
-        alt_tab: alt_tab {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LA(TAB)>;
-            label = "ALT_TAB";
-        };
-    };
-
     behaviors {
         semi_colon: semi_colon {
             compatible = "zmk,behavior-tap-dance";
@@ -106,7 +85,7 @@ ZMK_HOLD_TAP(hmr,
         accents {
             bindings = <
 &trans  &trans        &trans        &trans            &trans        &trans        &trans           &trans   &trans  &trans  &trans  &trans
-&trans  &trans        &kp C_PREV    &kp C_PLAY_PAUSE  &kp C_NEXT    &trans        &trans           &e_aigu  &trans  &trans  &trans  &trans
+&trans  &trans        &kp C_PREV    &kp C_PLAY_PAUSE  &kp C_NEXT    &trans        &trans           &trans  &trans  &trans  &trans  &trans
 &trans  &bt BT_SEL 3  &bt BT_SEL 2  &bt BT_SEL 1      &bt BT_SEL 0  &bt BT_CLR    &rgb_ug RGB_TOG  &trans   &trans  &trans  &trans  &rgb_ug RGB_HUI
                                     &rgb_ug RGB_HUD   &to 0         &trans        &trans           &to 1    &to 2
             >;
