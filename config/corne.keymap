@@ -34,24 +34,6 @@ ZMK_HOLD_TAP(hmr,
 )
 
 / {
-    behaviors {
-        semi_colon: semi_colon {
-            compatible = "zmk,behavior-tap-dance";
-            label = "SEMI_COLON";
-            #binding-cells = <0>;
-            bindings = <&kp SEMICOLON>, <&kp COLON>;
-        };
-
-        backspace_delete: backspace_delete {
-            compatible = "zmk,behavior-mod-morph";
-            label = "BACKSPACE_DELETE";
-            bindings = <&kp BACKSPACE>, <&kp DELETE>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-    };
-
     keymap {
         compatible = "zmk,keymap";
 
